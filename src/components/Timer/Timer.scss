@@ -1,0 +1,38 @@
+@import "../../styles/shared";
+
+.Timer {
+  @include Card();
+  position: absolute;
+  left: -200px;
+  background: $active;
+  top: 120px;
+  color: white;
+  font-family: $menu-font;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+
+  & span {
+    width: 33%;
+    display: block;
+    text-align: center;
+  }
+
+  &__display {
+    width: 150px;
+  }
+
+  &__message {
+    font-family: $menu-font;
+    font-weight: 100;
+    width: 150px;
+    position: absolute;
+    z-index: 9;
+    left: -190px;
+    top: 240px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+  }
+}

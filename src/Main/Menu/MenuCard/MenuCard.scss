@@ -1,0 +1,80 @@
+@import "../../../styles/shared";
+
+.MenuCard {
+  @include Card();
+  background: black;
+  order: 1;
+  color: white;
+  position: relative;
+  font-family: $menu-font;
+}
+
+@for $i from 1 through 9 {
+  .MenuCard:nth-child(#{$i}) {
+    background-color: lighten($base-color, $i * 6%);
+    color: darken(lighten($base-color, $i * 8%), 25%);
+    order: (#{$i})
+  }
+}
+
+.button {
+  color: white;
+  font-size: 1.5em;
+  font-family: $menu-font;
+
+  font-weight: 100;
+  position: absolute;
+  transition: left .5s;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  border-radius: 10px;
+  z-index: 9;
+  cursor: pointer;
+}
+
+.button.right {
+  transition-duration: .5s;
+  transition-timing-function: ease-in;
+}
+
+
+#id10, #id11, #id12 {
+  background: transparent;
+}
+
+#id10 {
+  order: 3;
+
+  .right {
+    opacity: 1;
+    left: 200px;
+  }
+}
+
+#id11 {
+  order: 4;
+  .right {
+    left: 200px + (170px * 2);
+  }
+}
+
+#id12 {
+  order: 8;
+  .right {
+    left: 200px + 170px;
+    opacity: 1;
+  }
+}
+
+@for $i from 1 through 9 {
+  .MenuCard:nth-child(#{$i}).right {
+    opacity: 0;
+  }
+}
+
+.center {
+  left: 0;
+}
+

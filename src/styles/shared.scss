@@ -1,0 +1,17 @@
+@import "./reset";
+@import "./animations";
+@import "./variables";
+
+@mixin Card {
+
+  height: 100px;
+  width: 150px;
+  display: flex;
+  margin: 10px;
+  padding: 3px 0;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  border-radius: 10px;
+
+}

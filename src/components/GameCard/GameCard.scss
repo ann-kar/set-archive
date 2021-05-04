@@ -1,0 +1,34 @@
+@import "../../styles/shared";
+
+.GameCard {
+  @include Card();
+  background: $main-background;
+  position: relative;
+
+  /* I include an after with z-index=9 to avoid clicking on Symbols instead of GameCards*/
+
+  &::after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: absolute;
+    z-index: 9;
+  }
+}
+
+.active {
+  border: 2px solid $active;
+  background: lighten($active, 30%);
+}
+
+.inactive {
+  background: #fff;
+}
+
+.highlight {
+  border: 2px solid $highlight;
+  background: lighten($highlight, 50%);
+}
