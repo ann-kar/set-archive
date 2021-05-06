@@ -2,9 +2,9 @@
 
 .MenuCard {
   @include Card();
-  background: black;
+  background: $app-background;
   order: 1;
-  color: white;
+  color: $main-background;
   position: relative;
   font-family: $menu-font;
 }
@@ -18,10 +18,9 @@
 }
 
 .button {
-  color: white;
+  color: $main-background;
   font-size: 1.5em;
   font-family: $menu-font;
-
   font-weight: 100;
   position: absolute;
   transition: left .5s;
@@ -77,4 +76,3 @@
 .center {
   left: 0;
 }
-
